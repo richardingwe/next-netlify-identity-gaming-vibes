@@ -1,7 +1,11 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
+import AuthContext from '../stores/authContext';
+import { useContext } from 'react';
 
 export default function Navbar() {
+  const user = useContextntext(AuthContext);
+
   return (
     <div className="container">
       <nav>
@@ -16,5 +20,5 @@ export default function Navbar() {
         <Image src="/banner.png" width={966} height={276} />
       </div>
     </div>
-  )
+  );
 }
